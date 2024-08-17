@@ -1,0 +1,686 @@
+@baseDir: '../';
+
+@font-face {
+    font-family: 'GeneralSans-Extralight';
+    src: url('@{baseDir}fonts/general-sans/GeneralSans-Extralight.woff2') format('woff2'),
+    url('@{baseDir}fonts/general-sans/GeneralSans-Extralight.woff') format('woff'),
+    url('@{baseDir}fonts/general-sans/GeneralSans-Extralight.ttf') format('truetype');
+    font-weight: 200;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GeneralSans-ExtralightItalic';
+    src: url('@{baseDir}fonts/general-sans/GeneralSans-ExtralightItalic.woff2') format('woff2'),
+    url('@{baseDir}fonts/general-sans/GeneralSans-ExtralightItalic.woff') format('woff'),
+    url('@{baseDir}fonts/general-sans/GeneralSans-ExtralightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-display: swap;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'GeneralSans-Light';
+    src: url('@{baseDir}fonts/general-sans/GeneralSans-Light.woff2') format('woff2'),
+    url('@{baseDir}fonts/general-sans/GeneralSans-Light.woff') format('woff'),
+    url('@{baseDir}fonts/general-sans/GeneralSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GeneralSans-LightItalic';
+    src: url('@{baseDir}fonts/general-sans/GeneralSans-LightItalic.woff2') format('woff2'),
+    url('@{baseDir}fonts/general-sans/GeneralSans-LightItalic.woff') format('woff'),
+    url('@{baseDir}fonts/general-sans/GeneralSans-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-display: swap;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'GeneralSans-Regular';
+    src: url('@{baseDir}fonts/general-sans/GeneralSans-Regular.woff2') format('woff2'),
+    url('@{baseDir}fonts/general-sans/GeneralSans-Regular.woff') format('woff'),
+    url('@{baseDir}fonts/general-sans/GeneralSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GeneralSans-Italic';
+    src: url('@{baseDir}fonts/general-sans/GeneralSans-Italic.woff2') format('woff2'),
+    url('@{baseDir}fonts/general-sans/GeneralSans-Italic.woff') format('woff'),
+    url('@{baseDir}fonts/general-sans/GeneralSans-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'GeneralSans-Medium';
+    src: url('@{baseDir}fonts/general-sans/GeneralSans-Medium.woff2') format('woff2'),
+    url('@{baseDir}fonts/general-sans/GeneralSans-Medium.woff') format('woff'),
+    url('@{baseDir}fonts/general-sans/GeneralSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GeneralSans-MediumItalic';
+    src: url('@{baseDir}fonts/general-sans/GeneralSans-MediumItalic.woff2') format('woff2'),
+    url('@{baseDir}fonts/general-sans/GeneralSans-MediumItalic.woff') format('woff'),
+    url('@{baseDir}fonts/general-sans/GeneralSans-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'GeneralSans-Semibold';
+    src: url('@{baseDir}fonts/general-sans/GeneralSans-Semibold.woff2') format('woff2'),
+    url('@{baseDir}fonts/general-sans/GeneralSans-Semibold.woff') format('woff'),
+    url('@{baseDir}fonts/general-sans/GeneralSans-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GeneralSans-SemiboldItalic';
+    src: url('@{baseDir}fonts/general-sans/GeneralSans-SemiboldItalic.woff2') format('woff2'),
+    url('@{baseDir}fonts/general-sans/GeneralSans-SemiboldItalic.woff') format('woff'),
+    url('@{baseDir}fonts/general-sans/GeneralSans-SemiboldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-display: swap;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'GeneralSans-Bold';
+    src: url('@{baseDir}fonts/general-sans/GeneralSans-Bold.woff2') format('woff2'),
+    url('@{baseDir}fonts/general-sans/GeneralSans-Bold.woff') format('woff'),
+    url('@{baseDir}fonts/general-sans/GeneralSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GeneralSans-BoldItalic';
+    src: url('@{baseDir}fonts/general-sans/GeneralSans-BoldItalic.woff2') format('woff2'),
+    url('@{baseDir}fonts/general-sans/GeneralSans-BoldItalic.woff') format('woff'),
+    url('@{baseDir}fonts/general-sans/GeneralSans-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: italic;
+}
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: wght 700.0;
+*
+* available axes:
+'wght' (range from 200.0 to 700.0
+*/
+@font-face {
+    font-family: 'GeneralSans-Variable';
+    src: url('@{baseDir}fonts/general-sans/GeneralSans-Variable.woff2') format('woff2'),
+    url('@{baseDir}fonts/general-sans/GeneralSans-Variable.woff') format('woff'),
+    url('@{baseDir}fonts/general-sans/GeneralSans-Variable.ttf') format('truetype');
+    font-weight: 200 700;
+    font-display: swap;
+    font-style: normal;
+}
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: wght 700.0;
+*
+* available axes:
+'wght' (range from 200.0 to 700.0
+*/
+@font-face {
+    font-family: 'GeneralSans-VariableItalic';
+    src: url('@{baseDir}fonts/general-sans/GeneralSans-VariableItalic.woff2') format('woff2'),
+    url('@{baseDir}fonts/general-sans/GeneralSans-VariableItalic.woff') format('woff'),
+    url('@{baseDir}fonts/general-sans/GeneralSans-VariableItalic.ttf') format('truetype');
+    font-weight: 200 700;
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Luckiest Guy';
+    src: url('@{baseDir}fonts/LuckiestGuy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Variables
+@primary-color: #7cbb00;
+@secondary-color: #3F3C3D;
+@dark-green-color: #8CC63F;
+@dark-green-color-transparent: rgba(140, 198, 63, 0.3);
+@lighter-green-color: lighten(@dark-green-color, 30%);
+@light-gray: #f5f5f5;
+@white-color: #ffffff;
+@font-family: 'GeneralSans-Medium', 'Arial', sans-serif;
+@font-family2: 'Luckiest Guy', 'Arial', sans-serif;
+
+// Global Styles
+body {
+    margin: 0;
+    padding: 0;
+    font-family: @font-family;
+    color: @secondary-color;
+    background-color: @light-gray;
+}
+
+.page-wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    .panel, .content {
+        display: none;
+    }
+    .page-main {
+        padding: 0;
+        max-width: 100%;
+        margin: -1px 0 0;
+    }
+}
+
+// Header Styles
+header {
+    .top-bar {
+        background-color: @dark-green-color;
+        height: 40px;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 40px;
+        text-align: center;
+        color: @white-color;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 80px;
+        .logo {
+            margin: 0 auto 0 0;
+        }
+    }
+
+    .top-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a {
+            color: @secondary-color;
+            text-decoration: none;
+            padding: 0 10px;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 19px;
+            text-transform: uppercase;
+            &:hover {
+                color: @primary-color;
+            }
+            &:last-of-type {
+                padding-right: 0;
+            }
+            img {
+                margin-bottom: -5px;
+            }
+        }
+        .reg-link {
+            padding-right: 0;
+            .reg-link-text {
+                border-right: 1px solid @secondary-color;
+                padding-right: 20px;
+            }
+        }
+        .cart-link {
+            .cart-link-wrap {
+                padding-left: 10px;
+                position: relative;
+                bottom: 4px;
+            }
+            .cart-link-icon {
+                margin-bottom: -12px;
+            }
+            .cart-link-text {
+                position: relative;
+                bottom: -5px;
+            }
+        }
+    }
+
+    .main-nav {
+        background-color: @dark-green-color-transparent;
+        border-bottom: 1px solid @light-gray;
+
+        .container {
+            padding: 12px 80px;
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+
+                li {
+                    margin: 0;
+
+                    a {
+                        text-decoration: none;
+                        color: @secondary-color;
+                        display: block;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 19px;
+                        text-align: center;
+                        text-transform: uppercase;
+
+                        &:hover {
+                            color: @primary-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        .search-bar {
+            input {
+                padding: 5px 10px;
+                border: 1px solid @light-gray;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+.sections.nav-sections {
+    display: none;
+}
+
+// Hero Section Styles
+.hero {
+    height: 680px;
+    background-image: url('@{baseDir}images/hero_bg1.png'),
+                    url('@{baseDir}images/x-balls.png'),
+                    radial-gradient(102.36% 149.74% at 69.69% 57.67%, #BED901 0%, #01C97D 100%);
+    background-position: left bottom, right center, center;
+    background-size: cover, auto, cover;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+
+    .container {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    .hero-text {
+        width: 580px;
+        margin-left: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            font-family: @font-family2;
+            color: @secondary-color;
+            font-size: 62px;
+            font-weight: 400;
+            line-height: 74px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-family: @font-family;
+            color: @secondary-color;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 0 30px;
+        }
+
+        .btn-primary {
+            color: @white-color;
+            text-decoration: none;
+            border-radius: 100px;
+            padding: 14px 62px;
+            box-sizing: border-box;
+            width: 215px;
+            height: 52px;
+            background: @dark-green-color;
+            font-family: @font-family;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 24px;
+            text-align: center;
+
+            &:hover {
+                background-color: darken(@dark-green-color, 10%);
+            }
+        }
+    }
+}
+
+// Categories Section Styles
+.categories {
+    padding: 40px 0;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 1080px;
+        height: 160px;
+        margin: 0 auto;
+    }
+
+    .category-icons {
+        display: flex;
+        justify-content: space-around;
+        height: 100%;
+        padding: 0 80px;
+
+        .category {
+            text-align: center;
+            max-width: 100px;
+
+            img {
+                width: 100px;
+                height: 100px;
+                margin-bottom: 10px;
+            }
+
+            p {
+                margin: 0;
+                color: @secondary-color;
+                font-family: @font-family;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 22px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+// Featured Products Section Styles
+.featured-products {
+    text-align: center;
+
+    .product {
+        display: inline-block;
+        width: 30%;
+        margin: 0 1.5%;
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        h3 {
+            margin: 20px 0 10px 0;
+            color: @secondary-color;
+            font-size: 1.5em;
+        }
+
+        .btn-primary {
+            background-color: @primary-color;
+            color: @white-color;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+
+            &:hover {
+                background-color: darken(@primary-color, 10%);
+            }
+        }
+    }
+}
+
+// Best Selling Section Styles
+.best-selling {
+    padding: 40px 0;
+    background-color: @light-gray;
+    text-align: center;
+
+    h2 {
+        color: @secondary-color;
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .product-list {
+        display: flex;
+        justify-content: space-around;
+
+        .product-item {
+            background-color: @white-color;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            text-align: center;
+
+            img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 15px;
+                border-radius: 10px;
+            }
+
+            h4 {
+                margin-bottom: 10px;
+                color: @secondary-color;
+                font-size: 1.3em;
+            }
+
+            p {
+                margin-bottom: 15px;
+                font-size: 1.1em;
+                color: @secondary-color;
+
+                span {
+                    text-decoration: line-through;
+                    color: lighten(@secondary-color, 20%);
+                }
+            }
+
+            .btn-primary {
+                background-color: @primary-color;
+                color: @white-color;
+                padding: 10px 20px;
+                text-decoration: none;
+                border-radius: 5px;
+
+                &:hover {
+                    background-color: darken(@primary-color, 10%);
+                }
+            }
+        }
+    }
+}
+
+// Happy Customer Section Styles
+.happy-customer {
+    padding: 40px 0;
+    background-color: @white-color;
+    text-align: center;
+
+    h2 {
+        color: @secondary-color;
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .testimonials {
+        display: flex;
+        justify-content: space-around;
+
+        .testimonial {
+            background-color: @light-gray;
+            padding: 20px;
+            border-radius: 10px;
+            width: 45%;
+
+            p {
+                color: @secondary-color;
+                font-size: 1.1em;
+                margin-bottom: 10px;
+
+                &:last-child {
+                    font-weight: bold;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+// Footer Section Styles
+footer {
+    background-color: @secondary-color;
+    color: @white-color;
+    padding: 40px 0;
+
+    .footer-top {
+        .shipping-info {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+
+            .shipping-item {
+                text-align: center;
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        border-top: 1px solid lighten(@secondary-color, 10%);
+        padding-top: 20px;
+
+        .footer-logo img {
+            width: 150px;
+            height: auto;
+        }
+
+        .footer-links {
+            h4 {
+                margin-bottom: 10px;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+
+                li {
+                    margin-bottom: 5px;
+
+                    a {
+                        color: @white-color;
+                        text-decoration: none;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-social {
+            h4 {
+                margin-bottom: 10px;
+            }
+
+            .social-icons {
+                display: flex;
+                margin-bottom: 10px;
+
+                a {
+                    margin-right: 10px;
+
+                    img {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
+
+            p {
+                margin-bottom: 10px;
+            }
+
+            .payment-methods img {
+                width: 100%;
+                max-width: 200px;
+            }
+        }
+    }
+}
+
+// Media Queries for Responsive Design
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .hero .container, .featured-products .container, .best-selling .container, .happy-customer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text, .hero-image, .product, .product-item, .testimonial {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .product-list {
+        flex-direction: column;
+
+        .product-item {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    .testimonials {
+        flex-direction: column;
+
+        .testimonial {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        .footer-logo, .footer-links, .footer-social {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    }
+}

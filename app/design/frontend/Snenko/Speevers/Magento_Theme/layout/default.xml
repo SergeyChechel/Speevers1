@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!-- Устанавливаем хедер -->
+        <referenceContainer name="header.container">
+            <block class="Magento\Theme\Block\Html\Header" name="header" template="Magento_Theme::html/header.phtml" after="-"/>
+        </referenceContainer>
+
+        <!-- Устанавливаем футер -->
+        <referenceContainer name="footer-container">
+            <block class="Magento\Theme\Block\Html\Footer" name="footer" template="Magento_Theme::html/footer.phtml" before="-"/>
+        </referenceContainer>
+    </body>
+</page>

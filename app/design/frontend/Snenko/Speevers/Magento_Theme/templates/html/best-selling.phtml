@@ -1,0 +1,32 @@
+<!-- Best Selling Section -->
+<section class="best-selling">
+    <div class="container">
+        <h2><?php echo $block->escapeHtml(__('Best Selling')); ?></h2>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="<?php echo $block->getViewFileUrl('images/item1.jpg'); ?>" alt="<?php echo $block->escapeHtml(__('Item #1')); ?>">
+                <h4><?php echo $block->escapeHtml(__('Item #1')); ?></h4>
+                <p>
+                    <?php echo $block->escapeHtml(__('20.00')); ?> <span><?php echo $block->escapeHtml(__('25.00')); ?></span>
+                </p>
+                <a href="#" class="btn-primary"><?php echo $block->escapeHtml(__('Learn More')); ?></a>
+            </div>
+            <div class="product-item">
+                <img src="<?php echo $block->getViewFileUrl('images/item2.jpg'); ?>" alt="<?php echo $block->escapeHtml(__('Item #2')); ?>">
+                <h4><?php echo $block->escapeHtml(__('Item #2')); ?></h4>
+                <p>
+                    <?php echo $block->escapeHtml(__('30.00')); ?> <span><?php echo $block->escapeHtml(__('35.00')); ?></span>
+                </p>
+                <a href="#" class="btn-primary"><?php echo $block->escapeHtml(__('Learn More')); ?></a>
+            </div>
+            <div class="product-item">
+                <img src="<?php echo $block->getViewFileUrl('images/item3.jpg'); ?>" alt="<?php echo $block->escapeHtml(__('Item #3')); ?>">
+                <h4><?php echo $block->escapeHtml(__('Item #3')); ?></h4>
+                <p>
+                    <?php echo $block->escapeHtml(__('15.00')); ?> <span><?php echo $block->escapeHtml(__('20.00')); ?></span>
+                </p>
+                <a href="#" class="btn-primary"><?php echo $block->escapeHtml(__('Learn More')); ?></a>
+            </div>
+        </div>
+    </div>
+</section>
