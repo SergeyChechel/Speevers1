@@ -1,32 +1,53 @@
 <!-- Best Selling Section -->
 <section class="best-selling">
-    <div class="container">
+    <div class="title">
         <h2><?php echo $block->escapeHtml(__('Best Selling')); ?></h2>
-        <div class="product-list">
-            <div class="product-item">
+        <p><?php echo $block->escapeHtml(__('Lorem ipsum dolor sit amet consectetur. Morbi aenean convallis fringilla quam lectus.')); ?></p>
+    </div>
+    <div class="product-list">
+        <div class="product-item">
+            <div class="img-container">
                 <img src="<?php echo $block->getViewFileUrl('images/item1.jpg'); ?>" alt="<?php echo $block->escapeHtml(__('Item #1')); ?>">
-                <h4><?php echo $block->escapeHtml(__('Item #1')); ?></h4>
-                <p>
-                    <?php echo $block->escapeHtml(__('20.00')); ?> <span><?php echo $block->escapeHtml(__('25.00')); ?></span>
-                </p>
-                <a href="#" class="btn-primary"><?php echo $block->escapeHtml(__('Learn More')); ?></a>
             </div>
-            <div class="product-item">
-                <img src="<?php echo $block->getViewFileUrl('images/item2.jpg'); ?>" alt="<?php echo $block->escapeHtml(__('Item #2')); ?>">
-                <h4><?php echo $block->escapeHtml(__('Item #2')); ?></h4>
-                <p>
-                    <?php echo $block->escapeHtml(__('30.00')); ?> <span><?php echo $block->escapeHtml(__('35.00')); ?></span>
-                </p>
-                <a href="#" class="btn-primary"><?php echo $block->escapeHtml(__('Learn More')); ?></a>
+            <h4><?php echo $block->escapeHtml(__('Item #1')); ?></h4>
+            <p class="price">
+                <span class="new-price"><?php echo $block->escapeHtml(__('20.00')); ?></span>
+                <span class="old-price"><?php echo $block->escapeHtml(__('25.00')); ?></span>
+            </p>
+            <a href="#" class="btn-primary"><?php echo $block->escapeHtml(__('Learn More')); ?></a>
+        </div>
+        <div class="product-item">
+            <div class="img-container">
+                <img src="<?php echo $block->getViewFileUrl('images/item2.jpg'); ?>" alt="<?php echo $block->escapeHtml(__('Item #1')); ?>">
             </div>
-            <div class="product-item">
-                <img src="<?php echo $block->getViewFileUrl('images/item3.jpg'); ?>" alt="<?php echo $block->escapeHtml(__('Item #3')); ?>">
-                <h4><?php echo $block->escapeHtml(__('Item #3')); ?></h4>
-                <p>
-                    <?php echo $block->escapeHtml(__('15.00')); ?> <span><?php echo $block->escapeHtml(__('20.00')); ?></span>
-                </p>
-                <a href="#" class="btn-primary"><?php echo $block->escapeHtml(__('Learn More')); ?></a>
+            <h4><?php echo $block->escapeHtml(__('Item #1')); ?></h4>
+            <p class="price">
+                <span class="new-price"><?php echo $block->escapeHtml(__('20.00')); ?></span>
+                <span class="old-price"><?php echo $block->escapeHtml(__('25.00')); ?></span>
+            </p>
+            <a href="#" class="btn-primary"><?php echo $block->escapeHtml(__('Learn More')); ?></a>
+        </div>
+        <div class="product-item">
+            <div class="img-container">
+                <img src="<?php echo $block->getViewFileUrl('images/item3.png'); ?>" alt="<?php echo $block->escapeHtml(__('Item #1')); ?>">
             </div>
+            <h4><?php echo $block->escapeHtml(__('Item #1')); ?></h4>
+            <p class="price">
+                <span class="new-price"><?php echo $block->escapeHtml(__('20.00')); ?></span>
+                <span class="old-price"><?php echo $block->escapeHtml(__('25.00')); ?></span>
+            </p>
+            <a href="#" class="btn-primary"><?php echo $block->escapeHtml(__('Learn More')); ?></a>
+        </div>
+        <div class="product-item">
+            <div class="img-container">
+                <img src="<?php echo $block->getViewFileUrl('images/item1.jpg'); ?>" alt="<?php echo $block->escapeHtml(__('Item #1')); ?>">
+            </div>
+            <h4><?php echo $block->escapeHtml(__('Item #1')); ?></h4>
+            <p class="price">
+                <span class="new-price"><?php echo $block->escapeHtml(__('20.00')); ?></span>
+                <span class="old-price"><?php echo $block->escapeHtml(__('25.00')); ?></span>
+            </p>
+            <a href="#" class="btn-primary"><?php echo $block->escapeHtml(__('Learn More')); ?></a>
         </div>
     </div>
 </section>

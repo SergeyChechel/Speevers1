@@ -1,0 +1,37 @@
+@import '_extend.less';
+
+.block-search {
+    color: @secondary-color;
+    height: 32px;
+    width: 32px;
+    padding: 0;
+    .block-content {
+        .minisearch {
+
+            .control {
+                padding: 0;
+                #search {
+                    display: none;
+                }
+            }
+
+            .actions {
+                position: relative;
+                cursor: pointer;
+                width: 32px;
+                height: 32px;
+                button {
+                    opacity: 1;
+                    padding: 0;
+                    right: 0;
+                    &:before {
+                        color: @secondary-color;
+                        font-size: 32px;
+                        line-height: 32px;
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -1,5 +1,66 @@
-<div class="footer-container">
-    <p><?php echo $block->escapeHtml(__('© %1 %2. All Rights Reserved.', date('Y'), 'Your Company Name')); ?></p>
-    <!-- Можно добавить дополнительные элементы подвала, такие как ссылки на страницы, социальные иконки и т.д. -->
-</div>
+<footer class="site-footer">
+    <div class="footer-container">
+        <!-- Footer Logo -->
+        <div class="logo-container">
+            <div class="footer-logo">
+                <img src="<?php echo $block->getViewFileUrl('images/logo-footer.png'); ?>" alt="<?php echo $this->escapeHtml(__('Speevers Logo')); ?>">
+            </div>
+            <div class="socials">
+                <h4><?php echo __('Find us here'); ?></h4>
+                <img src="<?php echo $block->getViewFileUrl('images/icon-instagram.png'); ?>" alt="Instagram">
+                <img src="<?php echo $block->getViewFileUrl('images/icon-facebook.png'); ?>" alt="Facebook">
+                <img src="<?php echo $block->getViewFileUrl('images/icon-youtube.png'); ?>" alt="YouTube">
+            </div>
+        </div>
+
+        <!-- Footer Content -->
+        <div class="footer-content">
+            <!-- Contact Column -->
+            <div class="footer-column">
+                <h4><?php echo __('Contact'); ?></h4>
+                <a href="mailto:info@speevers.com">info@speevers.com</a>
+                <address>
+                    <?php echo __('SIHAI JINYUAN 1A BUILDING, 704 HUAQIAO CITY,'); ?><br>
+                    <?php echo __('DISTRICT PINGHU STREET, LONGGANG'); ?>
+                    <?php echo __('DISTRICT, SHENZHEN, CHINA'); ?>
+                </address>
+
+            </div>
+
+            <!-- Customer Service Column -->
+            <div class="footer-column right">
+                <h4><?php echo __('Customer Service'); ?></h4>
+                <ul>
+                    <li><a href="#"><?php echo __('Shipping & Delivery'); ?></a></li>
+                    <li><a href="#"><?php echo __('About Us'); ?></a></li>
+                    <li><a href="#"><?php echo __('Privacy & Cookies Policy'); ?></a></li>
+                </ul>
+            </div>
+
+            <!-- Quick Links Column -->
+            <div class="footer-column">
+                <h4><?php echo __('Quick Links'); ?></h4>
+                <ul>
+                    <li><a href="#"><?php echo __('Terms Of Services'); ?></a></li>
+                    <li><a href="#"><?php echo __('Order History'); ?></a></li>
+                    <li><a href="#"><?php echo __('My Account'); ?></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p class="copy">© Copyright <?php echo date('Y'); ?></p>
+            <div class="pay-sys">
+                <p><?php echo __('Accept Payment'); ?></p>
+                <img src="<?php echo $block->getViewFileUrl('images/icon-stripe.png'); ?>" alt="Stripe">
+                <img src="<?php echo $block->getViewFileUrl('images/paypal-logo.jpg'); ?>" alt="PayPal">
+                <img src="<?php echo $block->getViewFileUrl('images/visa-logo.png'); ?>" alt="Visa">
+                <img src="<?php echo $block->getViewFileUrl('images/mastercard-logo.png'); ?>" alt="Mastercard">
+                <img src="<?php echo $block->getViewFileUrl('images/express-logo.png'); ?>" alt="American Express">
+            </div>
+        </div>
+    </div>
+</footer>
+
 

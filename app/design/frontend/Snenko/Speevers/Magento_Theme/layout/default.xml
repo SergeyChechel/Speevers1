@@ -2,10 +2,29 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <!-- Устанавливаем хедер -->
         <referenceContainer name="header.container">
-            <block class="Magento\Theme\Block\Html\Header" name="header" template="Magento_Theme::html/header.phtml" after="-"/>
+            <container name="header.speever.wrapper" htmlClass="header-container" htmlTag="div" before="-">
+                <block class="Magento\Theme\Block\Html\Header" name="header.speever" template="Magento_Theme::html/sp-header.phtml" />
+            </container>
         </referenceContainer>
+
+        <move element="header.panel" destination="header-wrapper" after="header.speever.wrapper"/>
+        <move element="top.search" destination="header.panel" after="top.links"/>
+        <move element="navigation.sections" destination="header.container" after="-"/>
+        <move element="minicart" destination="header-wrapper" after="-" />
+
+        <referenceBlock name="top.links">
+            <referenceBlock name="my-account-link" remove="true" />
+            <referenceBlock name="catalog.compare.link" remove="true" />
+            <referenceBlock name="header" remove="true" />
+            <referenceBlock name="advanced-search-link" remove="true"/>
+        </referenceBlock>
+
+        <referenceBlock name="register-link">
+            <arguments>
+                <argument name="label" xsi:type="string" translate="true">REGISTER</argument>
+            </arguments>
+        </referenceBlock>
 
         <!-- Устанавливаем футер -->
         <referenceContainer name="footer-container">

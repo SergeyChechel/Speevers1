@@ -1,16 +1,52 @@
 <!-- Happy Customer Section -->
 <section class="happy-customer">
-    <div class="container">
+    <div class="title">
         <h2><?php echo $block->escapeHtml(__('Happy Customer')); ?></h2>
+        <p><?php echo $block->escapeHtml(__('Lorem ipsum dolor sit amet consectetur. Morbi aenean convallis fringilla quam lectus.')); ?></p>
+    </div>
+    <div class="slider">
         <div class="testimonials">
             <div class="testimonial">
-                <p><?php echo $block->escapeHtml(__('“We are working hard to provide the best quality for you and we hope that you and your friends enjoy your new speevers X-balls!”')); ?></p>
-                <p>- <?php echo $block->escapeHtml(__('Ashraf Annie, Our Customer Chief')); ?></p>
+                <p class="text"><?php echo $block->escapeHtml(__('“We are working hard to provide the best quality for you and we never choose easy and faster ways to provide your quickly access to World Wide Web”.')); ?></p>
+                <div class="signature">
+                    <div class="photo-container">
+                        <img class="photo" src="<?php echo $block->getViewFileUrl('images/photo1.jpeg'); ?>" alt="<?php echo $block->escapeHtml(__('photo')); ?>">
+                    </div>
+                    <div class="intro">
+                        <div class="name"><?php echo $block->escapeHtml(__('Ashraful Amin')); ?></div>
+                        <div class="role"><?php echo $block->escapeHtml(__('Our Confident Client')); ?></div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial central">
+                <p class="text"><?php echo $block->escapeHtml(__('“We are working hard to provide the best quality for you and we never choose easy and faster ways to provide your quickly access to World Wide Web”.')); ?></p>
+                <div class="signature">
+                    <div class="photo-container">
+                        <img class="photo" src="<?php echo $block->getViewFileUrl('images/photo1.jpeg'); ?>" alt="<?php echo $block->escapeHtml(__('photo')); ?>">
+                    </div>
+                    <div class="intro">
+                        <div class="name"><?php echo $block->escapeHtml(__('Ashraful Amin')); ?></div>
+                        <div class="role"><?php echo $block->escapeHtml(__('Our Confident Client')); ?></div>
+                    </div>
+                </div>
             </div>
             <div class="testimonial">
-                <p><?php echo $block->escapeHtml(__('“We are working hard to provide the best quality for you and we hope that you and your friends enjoy your new speevers X-balls!”')); ?></p>
-                <p>- <?php echo $block->escapeHtml(__('Ashraf Annie, Our Customer Chief')); ?></p>
+                <p class="text"><?php echo $block->escapeHtml(__('“We are working hard to provide the best quality for you and we never choose easy and faster ways to provide your quickly access to World Wide Web”.')); ?></p>
+                <div class="signature">
+                    <div class="photo-container">
+                        <img class="photo" src="<?php echo $block->getViewFileUrl('images/photo2.jpeg'); ?>" alt="<?php echo $block->escapeHtml(__('photo')); ?>">
+                    </div>
+                    <div class="intro">
+                        <div class="name"><?php echo $block->escapeHtml(__('Ashraful Amin')); ?></div>
+                        <div class="role"><?php echo $block->escapeHtml(__('Our Confident Client')); ?></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <div class="controls">
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
 </section>
+

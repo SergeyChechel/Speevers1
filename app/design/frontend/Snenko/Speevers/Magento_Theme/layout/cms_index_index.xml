@@ -25,5 +25,10 @@
         <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\Template" name="happy_customer_section" template="Magento_Theme::html/happy-customer.phtml"/>
         </referenceContainer>
+
+        <!-- Our advantages -->
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="our_advantages_section" template="Magento_Theme::html/advantages.phtml"/>
+        </referenceContainer>
     </body>
 </page>
