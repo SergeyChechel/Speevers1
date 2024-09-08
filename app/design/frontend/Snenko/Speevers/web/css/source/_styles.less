@@ -449,20 +449,15 @@ header {
 .categories {
     margin: 40px 0;
 
-    .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        max-width: 1080px;
-        height: 160px;
-        margin: 0 auto;
-    }
-
     .category-icons {
         display: flex;
         justify-content: space-around;
-        height: 100%;
+        flex-wrap: wrap;
         padding: 0 80px;
+        max-width: 1080px;
+        height: 160px;
+        margin: 0 auto;
+        box-sizing: border-box;
 
         .category {
             text-align: center;
@@ -495,8 +490,6 @@ header {
                     }
                 }
             }
-
-
         }
     }
 }
@@ -977,6 +970,7 @@ header {
 
     .logo-container {
         display: flex;
+        flex-wrap: wrap;
         width: 100%;
         justify-content: space-between;
         align-items: center;
@@ -1001,6 +995,7 @@ header {
     .footer-content {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         width: 100%;
         padding: 35px 0 25px;
         margin: 20px 0 27px;
@@ -1049,7 +1044,7 @@ header {
                 }
             }
             &:first-of-type {
-                max-width: 370px;
+                //max-width: 370px;
                 a {
                     margin-bottom: 10px;
                 }
@@ -1075,19 +1070,22 @@ header {
         width: 100%;
         text-align: center;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
 
         p {
             font-size: 14px;
             margin: 0;
+            min-width: 115px;
         }
 
         .pay-sys {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            min-width: 385px;
+            //min-width: 385px;
             p {
                 font-size: 12px;
                 font-weight: 600;
@@ -1111,7 +1109,47 @@ header {
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
 
     .page-header {
+        .header.content {
+            padding: 25px 15px;
+            .logo {
+                width: 120px;
+            }
+            .panel.header {
+                width: 80px;
+                max-height: 16px;
+                .links {
+                    li {
+                        margin: 0 4px !important;
+                        &.my-account-link i {
+                            top: 0;
+                        }
+                    }
+                    i:before {
+                        font-size: 16px;
+                    }
+                }
+                .block-search {
+                    margin: 0;
+                    .minisearch .actions {
+                        width: 21px;
+                    }
+                    .label:before {
+                        font-size: 25px !important;
+                    }
+                }
+            }
+            .minicart-wrapper {
+                width: 18px;
+                padding-left: 5px !important;
+                i {
+                    top: 0;
+                    &:before {
+                        font-size: 18px;
+                    }
+                }
 
+            }
+        }
     }
 
 }
@@ -1254,8 +1292,6 @@ header {
                     font-style: normal;
                 }
             }
-
         }
     }
-
 }
