@@ -1,53 +1,29 @@
 <!-- Best Selling Section -->
+<?php $topSellers = $block->getTopSellingProductsByOrderItem(4); ?>
+
 <section class="best-selling">
     <div class="title">
         <h2><?php echo $block->escapeHtml(__('Best Selling')); ?></h2>
         <p><?php echo $block->escapeHtml(__('Lorem ipsum dolor sit amet consectetur. Morbi aenean convallis fringilla quam lectus.')); ?></p>
     </div>
     <div class="product-list">
-        <div class="product-item">
-            <div class="img-container">
-                <img src="<?php echo $block->getViewFileUrl('images/item1.jpg'); ?>" alt="<?php echo $block->escapeHtml(__('Item #1')); ?>">
+
+        <?php foreach ($topSellers as $product): ?>
+            <div class="product-item">
+                <div class="img-container">
+                    <!-- Вывод кнопки Add to Wishlist -->
+                    <?php echo $block->getLayout()->createBlock('Magento\Wishlist\Block\Catalog\Product\ProductList\Item\AddTo\Wishlist')->setProduct($product)->setTemplate("Magento_Wishlist::catalog/product/list/addto/wishlist.phtml")->toHtml(); ?>
+                    <!--  -->
+                    <img src="<?php echo $block->getProductImageUrl($product); ?>" alt="<?php echo $block->escapeHtml($product->getName()); ?>" />
+                </div>
+                <h4><?php echo $block->escapeHtml($product->getName()); ?></h4>
+                <p class="price">
+                    <span class="new-price"><?php echo $block->escapeHtml(number_format($product->getPrice(), 2)); ?></span>
+                    <span class="old-price"><?php echo $block->escapeHtml(number_format($product->getPrice() * 1.2, 2)); ?></span>
+                </p>
+                <a href="<?php echo $product->getProductUrl(); ?>" class="btn-primary"><?php echo $block->escapeHtml(__('Learn More')); ?></a>
             </div>
-            <h4><?php echo $block->escapeHtml(__('Item #1')); ?></h4>
-            <p class="price">
-                <span class="new-price"><?php echo $block->escapeHtml(__('20.00')); ?></span>
-                <span class="old-price"><?php echo $block->escapeHtml(__('25.00')); ?></span>
-            </p>
-            <a href="#" class="btn-primary"><?php echo $block->escapeHtml(__('Learn More')); ?></a>
-        </div>
-        <div class="product-item">
-            <div class="img-container">
-                <img src="<?php echo $block->getViewFileUrl('images/item2.jpg'); ?>" alt="<?php echo $block->escapeHtml(__('Item #1')); ?>">
-            </div>
-            <h4><?php echo $block->escapeHtml(__('Item #1')); ?></h4>
-            <p class="price">
-                <span class="new-price"><?php echo $block->escapeHtml(__('20.00')); ?></span>
-                <span class="old-price"><?php echo $block->escapeHtml(__('25.00')); ?></span>
-            </p>
-            <a href="#" class="btn-primary"><?php echo $block->escapeHtml(__('Learn More')); ?></a>
-        </div>
-        <div class="product-item">
-            <div class="img-container">
-                <img src="<?php echo $block->getViewFileUrl('images/item3.png'); ?>" alt="<?php echo $block->escapeHtml(__('Item #1')); ?>">
-            </div>
-            <h4><?php echo $block->escapeHtml(__('Item #1')); ?></h4>
-            <p class="price">
-                <span class="new-price"><?php echo $block->escapeHtml(__('20.00')); ?></span>
-                <span class="old-price"><?php echo $block->escapeHtml(__('25.00')); ?></span>
-            </p>
-            <a href="#" class="btn-primary"><?php echo $block->escapeHtml(__('Learn More')); ?></a>
-        </div>
-        <div class="product-item">
-            <div class="img-container">
-                <img src="<?php echo $block->getViewFileUrl('images/item1.jpg'); ?>" alt="<?php echo $block->escapeHtml(__('Item #1')); ?>">
-            </div>
-            <h4><?php echo $block->escapeHtml(__('Item #1')); ?></h4>
-            <p class="price">
-                <span class="new-price"><?php echo $block->escapeHtml(__('20.00')); ?></span>
-                <span class="old-price"><?php echo $block->escapeHtml(__('25.00')); ?></span>
-            </p>
-            <a href="#" class="btn-primary"><?php echo $block->escapeHtml(__('Learn More')); ?></a>
-        </div>
+        <?php endforeach; ?>
+
     </div>
 </section>

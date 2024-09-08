@@ -13,9 +13,9 @@ if ($block->isLoggedIn()) {
     $dataPostParam = sprintf(" data-post='%s'", $block->getPostParams());
 }
 ?>
+
 <li class="link authorization-link" data-label="<?= $escaper->escapeHtml(__('or')) ?>">
     <a <?= /* @noEscape */ $block->getLinkAttributes() ?> <?= /* @noEscape */ $dataPostParam ?>>
-        <!-- escapeHtml($block->getLabel()) -->
-        <?= $escaper->escapeHtml(__('LOGIN')) ?>
+        <?= $escaper->escapeHtml($block->getLabel()); ?>
     </a>
 </li>

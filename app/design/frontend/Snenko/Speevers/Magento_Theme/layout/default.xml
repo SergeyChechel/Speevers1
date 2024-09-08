@@ -4,8 +4,9 @@
     <body>
         <referenceContainer name="header.container">
             <container name="header.speever.wrapper" htmlClass="header-container" htmlTag="div" before="-">
-                <block class="Magento\Theme\Block\Html\Header" name="header.speever" template="Magento_Theme::html/sp-header.phtml" />
+                <block class="Magento\Theme\Block\Html\Header" name="header.speever" template="Magento_Theme::html/header/sp-header.phtml" />
             </container>
+            <block class="Magento\Theme\Block\Html\Header\Logo" name="sp-hamburger-menu" template="Magento_Theme::html/header/hamburger-menu.phtml" after="navigation.sections" />
         </referenceContainer>
 
         <move element="header.panel" destination="header-wrapper" after="header.speever.wrapper"/>
@@ -14,11 +15,12 @@
         <move element="minicart" destination="header-wrapper" after="-" />
 
         <referenceBlock name="top.links">
-            <referenceBlock name="my-account-link" remove="true" />
             <referenceBlock name="catalog.compare.link" remove="true" />
             <referenceBlock name="header" remove="true" />
             <referenceBlock name="advanced-search-link" remove="true"/>
         </referenceBlock>
+
+        <move element="my-account-link" destination="top.links" after="wish-list-link"/>
 
         <referenceBlock name="register-link">
             <arguments>
@@ -28,7 +30,18 @@
 
         <!-- Устанавливаем футер -->
         <referenceContainer name="footer-container">
-            <block class="Magento\Theme\Block\Html\Footer" name="footer" template="Magento_Theme::html/footer.phtml" before="-"/>
+            <container name="footer" as="footer" before="footer" label="Speevers Footer Container" htmlTag="div" htmlClass="site-footer">
+                <container name="speevers-footer-container" label="Speevers Footer Wrapper" htmlTag="div" htmlClass="footer-container">
+                    <block class="Magento\Theme\Block\Html\Footer" name="speevers-footer-logo" template="Magento_Theme::html/footer/logo-footer-part.phtml" before="-"/>
+                    <container name="speevers-footer-content" label="Speevers Footer Wrapper" htmlTag="div" htmlClass="footer-content">
+                        <block class="Magento\Theme\Block\Html\Footer" name="footer-content-contact" template="Magento_Theme::html/footer/content-footer-contact.phtml" before="-"/>
+                        <block class="Magento\Theme\Block\Html\Footer" name="footer-content-service" template="Magento_Theme::html/footer/content-footer-service.phtml" after="footer-content-contact"/>
+                        <block class="Magento\Theme\Block\Html\Footer" name="footer-content-links" template="Magento_Theme::html/footer/content-footer-links.phtml" after="footer-content-service"/>
+                    </container>
+                    <block class="Magento\Theme\Block\Html\Footer" name="speevers-footer-bottom" template="Magento_Theme::html/footer/bottom-footer-part.phtml" after="speevers-footer-content"/>
+                </container>
+            </container>
         </referenceContainer>
+
     </body>
 </page>
