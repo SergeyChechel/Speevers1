@@ -37,6 +37,8 @@
                         <block class="Magento\Theme\Block\Html\Footer" name="footer-content-contact" template="Magento_Theme::html/footer/content-footer-contact.phtml" before="-"/>
                         <block class="Magento\Theme\Block\Html\Footer" name="footer-content-service" template="Magento_Theme::html/footer/content-footer-service.phtml" after="footer-content-contact"/>
                         <block class="Magento\Theme\Block\Html\Footer" name="footer-content-links" template="Magento_Theme::html/footer/content-footer-links.phtml" after="footer-content-service"/>
+                        <block class="Magento\Theme\Block\Html\Footer" name="footer-content-contact-2" template="Magento_Theme::html/footer/content-footer-contact.phtml" after="footer-content-links"/>
+                        <block class="Magento\Theme\Block\Html\Footer" name="speevers-footer-socials" template="Magento_Theme::html/footer/content-footer-socials.phtml" after="-"/>
                     </container>
                     <block class="Magento\Theme\Block\Html\Footer" name="speevers-footer-bottom" template="Magento_Theme::html/footer/bottom-footer-part.phtml" after="speevers-footer-content"/>
                 </container>

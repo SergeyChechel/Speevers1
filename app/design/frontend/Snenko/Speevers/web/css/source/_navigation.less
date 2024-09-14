@@ -80,13 +80,14 @@
 
     .nav-sections {
         -webkit-overflow-scrolling: touch;
-        .lib-css(transition, left .3s, 1);
+        //.lib-css(transition, left .3s, 1);
         height: 100%;
-        left: calc(~'-1 * (100% - @{active-nav-indent})');
+        //left: calc(~'-1 * (100% - @{active-nav-indent})');
         overflow: auto;
         position: fixed;
-        top: 0;
+        top: 90px;
         width: calc(~'100% - @{active-nav-indent}');
+        display: none;
 
         .switcher {
             border-top: 1px solid @color-gray82;
@@ -178,35 +179,41 @@
         }
     }
 
-    .nav-before-open {
-        height: 100%;
-        overflow-x: hidden;
-        width: 100%;
-
-        .page-wrapper {
-            .lib-css(transition, left .3s, 1);
-            height: 100%;
-            left: 0;
-            overflow: hidden;
-            position: relative;
-        }
-
-        body {
-            height: 100%;
-            overflow: hidden;
-            position: relative;
-            width: 100%;
-        }
-    }
+    //.nav-before-open {
+    //    height: 100%;
+    //    overflow-x: hidden;
+    //    width: 100%;
+    //
+    //    .page-wrapper {
+    //        .lib-css(transition, left .3s, 1);
+    //        height: 100%;
+    //        left: 0;
+    //        overflow: hidden;
+    //        position: relative;
+    //    }
+    //
+    //    body {
+    //        height: 100%;
+    //        overflow: hidden;
+    //        position: relative;
+    //        width: 100%;
+    //    }
+    //}
 
     .nav-open {
-        .page-wrapper {
-            left: calc(~'100% - @{active-nav-indent}');
-        }
+        //.page-wrapper {
+        //    left: calc(~'100% - @{active-nav-indent}');
+        //}
+        overflow: hidden;
 
         .nav-sections {
-            @_shadow: 0 0 5px 0 rgba(50, 50, 50, .75);
-            .lib-css(box-shadow, @_shadow, 1);
+
+            position: unset;
+            width: 100%;
+            display: block;
+
+            //@_shadow: 0 0 5px 0 rgba(50, 50, 50, .75);
+            //.lib-css(box-shadow, @_shadow, 1);
             left: 0;
             z-index: 99;
         }
@@ -219,12 +226,20 @@
                 height: 100%;
                 position: fixed;
                 right: 0;
-                top: 0;
+                top: 113px;
                 width: 100%;
                 z-index: 1;
             }
         }
     }
+
+    //.nav-open {
+    //    .nav-sections {
+    //        position: unset;
+    //        width: 100%;
+    //    }
+    //}
+
 
     .nav-sections-items {
         .lib-clearfix();
