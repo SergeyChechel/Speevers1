@@ -19,6 +19,10 @@
         color: @white-color;
     }
 
+    .gray-text, .gray-text:after {
+        color: @secondary-color !important;
+    }
+
     .bg-dark-green {
         background: @dark-green-color !important;
     }
@@ -1568,6 +1572,9 @@
                             display: none !important;
                         }
                         .level0 {
+                            ul.level0:hover {
+
+                            }
                             min-height: 50px;
                             border: none;
                             margin: 5px auto;
@@ -1579,6 +1586,7 @@
                                 > a, > a:after {
                                     color: @dark-green-color;
                                     background: @dark-green-color-transparent2;
+                                    font-weight: 600;
                                 }
                             }
                             > li > a {
@@ -1588,10 +1596,7 @@
                                     height: 48px;
                                     border-radius: 12px;
                                     margin-right: 15px;
-                                    + span {
-                                        display: inline-block;
-                                    }
-                                }
+                                 }
                                 .mob-cat-descr {
                                     display: inline-block;
                                 }
@@ -1604,6 +1609,19 @@
                                         flex-direction: column;
                                         justify-content: space-around;
                                         align-items: flex-start;
+                                        span:first-of-type {
+                                            text-transform: uppercase;
+                                        }
+                                        .mob-cat-descr {
+                                            font-weight: 400;
+                                            font-size: 12px;
+                                            line-height: 18px;
+                                        }
+                                    }
+                                    &:hover {
+                                        .descr-wrap {
+                                            color: @dark-green-color;
+                                        }
                                     }
                                 }
                             }

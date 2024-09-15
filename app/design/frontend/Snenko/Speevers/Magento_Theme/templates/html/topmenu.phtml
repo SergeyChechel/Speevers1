@@ -21,3 +21,21 @@ $_menuHtml = $block->getHtml('level-top', 'submenu', $columnsLimit);
         <?= $block->getChildHtml() ?>
     </ul>
 </nav>
+
+<script>
+    document.querySelectorAll('li.level0').forEach(container => {
+        const children = container.children;
+        if (children.length > 1) {
+            const firstChild = children[0];
+            const secondChild = children[1];
+
+            secondChild.addEventListener('mouseover', () => {
+                firstChild.classList.add('gray-text');
+            });
+
+            secondChild.addEventListener('mouseout', () => {
+                firstChild.classList.remove('gray-text');
+            });
+        }
+    });
+</script>
