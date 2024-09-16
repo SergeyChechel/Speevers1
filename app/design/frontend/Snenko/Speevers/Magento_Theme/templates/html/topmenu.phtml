@@ -29,11 +29,11 @@ $_menuHtml = $block->getHtml('level-top', 'submenu', $columnsLimit);
             const firstChild = children[0];
             const secondChild = children[1];
 
-            secondChild.addEventListener('mouseover', () => {
+            secondChild.addEventListener('mouseenter', () => {
                 firstChild.classList.add('gray-text');
             });
 
-            secondChild.addEventListener('mouseout', () => {
+            secondChild.addEventListener('mouseleave', () => {
                 firstChild.classList.remove('gray-text');
             });
         }

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<!--    <head>-->
+<!--        <script src="js/happy-customer-slider.js"/>-->
+<!--    </head>-->
+    <body>
+        <referenceBlock name="page.main.title" remove="true" />
+        <!-- Hero Section -->
+        <referenceContainer name="content">
+            <block class="Snenko\CategoryLinks\Block\CategoryLinks" name="hero_section" template="Magento_Theme::html/hero.phtml"/>
+        </referenceContainer>
+
+        <!-- Categories Section -->
+        <referenceContainer name="content">
+            <block class="Snenko\CategoryLinks\Block\CategoryLinks" name="categories_section" template="Magento_Theme::html/categories.phtml"/>
+        </referenceContainer>
+
+        <!-- Featured Products Section -->
+        <referenceContainer name="content">
+            <block class="Snenko\CategoryLinks\Block\CategoryLinks" name="featured_products_section" template="Magento_Theme::html/featured-products.phtml"/>
+        </referenceContainer>
+
+        <!-- Best Selling Section -->
+        <referenceContainer name="content">
+            <block class="Snenko\TopSellers\Block\TopSellers" name="best_selling_section" template="Magento_Theme::html/best-selling.phtml"/>
+        </referenceContainer>
+
+        <!-- Happy Customer Section -->
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="happy_customer_section" template="Magento_Theme::html/happy-customer.phtml"/>
+        </referenceContainer>
+
+        <!-- Our advantages -->
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="our_advantages_section" template="Magento_Theme::html/advantages.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

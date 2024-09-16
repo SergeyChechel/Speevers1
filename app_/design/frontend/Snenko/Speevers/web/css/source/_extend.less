@@ -1,0 +1,54 @@
+@baseDir: '../';
+
+@import '../general-sans.css';
+@font-face {
+    font-family: 'Luckiest Guy';
+    src: url('@{baseDir}fonts/LuckiestGuy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+// Variables
+@primary-color: #7cbb00;
+@secondary-color: #3F3C3D;
+@dark-green-color: #8CC63F;
+@dark-green-color-transparent2: rgba(140, 198, 63, 0.1);
+@dark-green-color-transparent: rgba(140, 198, 63, 0.3);
+@lighter-green-color: lighten(@dark-green-color, 30%);
+@light-gray: #f5f5f5;
+@gray-color: #898788;
+@white-color: #ffffff;
+@font-family: 'GeneralSans-Variable', 'Arial', sans-serif;
+@font-family2: 'Luckiest Guy', 'Arial', sans-serif;
+@font-family3: 'FontAwesome';
+
+@screen__xxs: 320px;
+@screen__xs: 480px;
+@screen__s: 640px;
+@screen__m: 768px;
+@screen__l: 1024px;
+@screen__xl: 1440px;
+
+
+.btn-primary(@background-color, @text-color, @font-family, @hover-darken-percentage: 10%) {
+    color: @text-color;
+    text-decoration: none;
+    border-radius: 100px;
+    padding: 14px 62px;
+    box-sizing: border-box;
+    width: 215px;
+    height: 50px;
+    background: @background-color;
+    font-family: @font-family;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+
+    &:hover {
+        background-color: darken(@background-color, @hover-darken-percentage);
+    }
+}

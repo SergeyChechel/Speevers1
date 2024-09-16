@@ -1,0 +1,34 @@
+<!-- Best Selling Section -->
+<?php $topSellers = $block->getTopSellingProductsByOrderItem(6); ?>
+
+<section class="best-selling">
+    <div class="title">
+        <h2><?php echo $block->escapeHtml(__('Best Selling')); ?></h2>
+        <p><?php echo $block->escapeHtml(__('Lorem ipsum dolor sit amet consectetur. Morbi aenean convallis fringilla quam lectus.')); ?></p>
+    </div>
+    <div class="product-list">
+        <?php foreach ($topSellers as $product): ?>
+            <div class="product-item">
+                <div class="img-container">
+                    <!-- Вывод кнопки Add to Wishlist -->
+                    <?php echo $block->getLayout()->createBlock('Magento\Wishlist\Block\Catalog\Product\ProductList\Item\AddTo\Wishlist')->setProduct($product)->setTemplate("Magento_Wishlist::catalog/product/list/addto/wishlist.phtml")->toHtml(); ?>
+                    <!--  -->
+                    <img src="<?php echo $block->getProductImageUrl($product); ?>" alt="<?php echo $block->escapeHtml($product->getName()); ?>" />
+                </div>
+                <?php
+                    $productName = $block->escapeHtml($product->getName());
+                    $maxLength = 27;
+                    if (mb_strlen($productName, 'UTF-8') > $maxLength) {
+                        $productName = mb_substr($productName, 0, $maxLength, 'UTF-8') . '...';
+                    }
+                ?>
+                <h4><?php echo $productName; ?></h4>
+                <p class="price">
+                    <span class="new-price"><?php echo $block->escapeHtml(number_format($product->getPrice(), 2)); ?></span>
+                    <span class="old-price"><?php echo $block->escapeHtml(number_format($product->getPrice() * 1.2, 2)); ?></span>
+                </p>
+                <a href="<?php echo $product->getProductUrl(); ?>" class="btn-primary"><?php echo $block->escapeHtml(__('Learn More')); ?></a>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</section>
